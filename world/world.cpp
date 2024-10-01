@@ -2,6 +2,7 @@
 #include <vector>
 #include <fstream>
 #include <sstream>
+#include <cstdint>
 #include "world.h"
 #include "country.h"
 #include "continent.h"
@@ -20,7 +21,7 @@ int fill_from_csv(vector<country> *_countryList)
     string _country;
     string _capital;
     string _continent;
-    uint i = 0 ;
+    uint16_t i = 0 ;
 
     if (!file.is_open())
     {

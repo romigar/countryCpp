@@ -1,4 +1,5 @@
 #include <iostream>
+#include <cstdint>
 #include "city.h"
 
 using namespace std;

@@ -1,5 +1,6 @@
 #include <iostream>
 #include <cstdlib>
+#include <cstdint>
 #include <vector>
 #include <fstream>
 #include <sstream>
@@ -18,7 +19,7 @@ int read_file(vector<country> *countrylist)
     string _country;
     string _capital;
     string _continent;
-    uint i = 0 ;
+    uint16_t i = 0 ;
 
     if (!file.is_open())
     {
