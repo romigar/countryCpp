@@ -11,6 +11,7 @@ add_executable(countryCpp main.cpp)
 file(GLOB_RECURSE OTHER_FILES "./*.h*")
 add_subdirectory(world)
 add_subdirectory(tests)
+add_subdirectory(game)
 
 target_link_libraries(${PROJECT_NAME} PUBLIC world)
 add_dependencies(${PROJECT_NAME}  world)
