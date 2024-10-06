@@ -156,5 +156,17 @@ void world::display(void)
 
 /* ***************************************************************** */
 
+uint8_t world::getContinentId(const string continentName)
+{
+    uint8_t id = 0;
+    for (int i = 0 ; i< continentList.size(); i++)
+    {
+        if (continentList.at(i).getName() == continentName)
+        {
+            id = continentList.at(i).getId();
+        }
+    }
+    return id;
+}
 
 

@@ -13,10 +13,11 @@ class country;
 class continent
 {
 protected:
+public:
     vector<country> list;
     string name;
     uint8_t id;
-public:
+
     continent();
     continent(const continent&);
     continent(string _name, uint8_t _id);
@@ -30,6 +31,12 @@ public:
     void display(void);
     void display_list(void);
     void display_list_country_name(void);
+
+    country pick(void);
+
+    string getRandomCountryName(void);
+    string getRandomCapitalName(void);
+
 
 private:
 

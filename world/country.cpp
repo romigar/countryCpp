@@ -51,16 +51,17 @@ country::~country()
 
 /* ***************************************************************** */
 
-inline uint8_t country::getId(void) const{   return id;  }
-inline void country::setId(const uint8_t newId){    id = newId;  }
-inline string country::getName(void) const{    return name; }
-inline void country::setName(const string newName){    name = newName;  }
-inline uint32_t country::getPopulation(void) const{  return population;  }
-inline void country::setPopulation(const uint32_t newPopulation){    population = newPopulation; }
-inline string country::getContinent(void) const{    return continent;   }
-inline void country::setContinent(const string newContinent){   continent = newContinent;   }
-inline uint8_t country::getContinentId(void) const{    return continentId;   }
-inline void country::setContinentId(const uint8_t newContinentId){   continentId = newContinentId;   }
+uint8_t country::getId(void) const{   return id;  }
+void country::setId(const uint8_t newId){    id = newId;  }
+string country::getName(void) const{    return name; }
+void country::setName(const string newName){    name = newName;  }
+uint32_t country::getPopulation(void) const{  return population;  }
+void country::setPopulation(const uint32_t newPopulation){    population = newPopulation; }
+string country::getContinent(void) const{    return continent;   }
+void country::setContinent(const string newContinent){   continent = newContinent;   }
+uint8_t country::getContinentId(void) const{    return continentId;   }
+void country::setContinentId(const uint8_t newContinentId){   continentId = newContinentId;   }
+string country::getCapitalName(void) const{ return capital->getName(); };
 
 /* ***************************************************************** */
 

@@ -37,6 +37,8 @@ public:
     uint8_t getContinentId(void) const;
     void setContinentId(const uint8_t newContinentId);
 
+    string getCapitalName(void) const;
+
     void display(void);
     void display_name(void);
 

@@ -1,5 +1,6 @@
 #include <iostream>
 #include <cstdint>
+#include <random>
 #include "continent.h"
 #include "country.h"
 
@@ -85,3 +86,47 @@ void continent::display_list_country_name(void)
 }
 
 /* ***************************************************************** */
+
+country continent::pick(void)
+{
+    country a;
+    if (list.empty() == false)
+    {
+        a = list.back();
+        list.pop_back();
+    }
+    return a;
+}
+
+/* ***************************************************************** */
+
+string continent::getRandomCountryName(void)
+{
+    // Initialiser le générateur aléatoire
+    random_device rd;  // Générateur de seed
+    mt19937 gen(rd()); // Générateur de nombres aléatoires Mersenne Twister
+
+    // Distribution uniforme pour choisir un index dans la plage du vector
+    uniform_int_distribution<> dis(0, list.size() - 1);
+
+    // Sélectionner un élément aléatoire
+    int random_index = dis(gen);
+    return list.at(random_index).getName();
+}
+
+/* ***************************************************************** */
+
+string continent::getRandomCapitalName(void)
+{
+    // Initialiser le générateur aléatoire
+    random_device rd;  // Générateur de seed
+    mt19937 gen(rd()); // Générateur de nombres aléatoires Mersenne Twister
+
+    // Distribution uniforme pour choisir un index dans la plage du vector
+    uniform_int_distribution<> dis(0, list.size() - 1);
+
+    // Sélectionner un élément aléatoire
+    int random_index = dis(gen);
+    return list.at(random_index).getCapitalName();
+}
+

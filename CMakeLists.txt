@@ -13,11 +13,12 @@ add_subdirectory(world)
 add_subdirectory(tests)
 add_subdirectory(game)
 
-target_link_libraries(${PROJECT_NAME} PUBLIC world)
-add_dependencies(${PROJECT_NAME}  world)
+target_link_libraries(${PROJECT_NAME} PUBLIC world game)
+add_dependencies(${PROJECT_NAME}  world game)
 target_include_directories(${PROJECT_NAME} PUBLIC
         ${CMAKE_CURRENT_SOURCE_DIR}
         ${CMAKE_CURRENT_SOURCE_DIR}/world
+        ${CMAKE_CURRENT_SOURCE_DIR}/game
         )
 
 
